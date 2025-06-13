@@ -1,0 +1,62 @@
+
+$color_nav: #EAEAEA;
+$color_entete: #F6F6F6;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+    font-family: "Shrikhand", sans-serif;
+    text-align: center;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 /25%);
+    padding: 0.3rem;
+    position: relative;
+}
+
+.city_location{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #F3F3F3;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+//Explorer
+
+.explorer{
+    text-align: center;
+}
+.explorer h2{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+.explorer p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.explorer button{
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 2px 1px 8px -3px #000000;
+    background-image: linear-gradient(to top, rgba(176, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+    transition: all 200ms;
+    margin-top: 0.5rem;
+}
+
+.explorer button:hover{
+    transform: scale(1.02);
+    opacity: 0.9;
+}

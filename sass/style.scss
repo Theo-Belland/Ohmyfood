@@ -20,7 +20,6 @@ $card-color: #99E2D0;
         font-size: 16px;
         border: none;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-
         &:hover {
             background: linear-gradient(356deg,
                     lighten(rgba(155, 89, 220, 1), 5%) 0%,
@@ -68,33 +67,36 @@ header{
     text-align: center;
     padding: 0.5rem;
     height: 50px;
+
+    h2{
+        font-size: 1rem;
+    }
 }
 
-.city_location h2{
-    font-size: 1rem;
-}
 
 //Explorer
 
-.explorer{
-        text-align: center;
 
-    h2{
-        font-size: 1.5rem;
-        margin-top: 2rem;
-    }
-    p{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-size: 1rem;
+.explorer {
+    background-color: $background-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 39px 45px 57px 45px;
+    
+    &__text {
+        text-align: center;
+        margin-bottom: 25px;
+
+        p {
+            margin-bottom: 0;
+        }
     }
     button{
         @include button;
     }
-    button:hover{
-        transform: scale(1.02);
-        opacity: 0.9;
-    }
+
 }
 
 .functioning{
@@ -300,4 +302,63 @@ header{
     font-weight: 400;
     font-size: 22px;
   }
+}
+
+// Media queries //
+@media (min-width: 1024px) { 
+    .functioning{
+        display: flex;
+        &__section{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__card{
+            flex-direction: row;
+            justify-content: center;
+            &--content{
+                width: 335px;
+                & h3{
+                    margin-top: 25px;
+                }
+            }
+        }
+        
+    }
+
+    .restaurant{
+        display: flex;
+        &__section{
+            & h2{
+                margin-left: 160px;
+            }
+        }
+        &__cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card{
+            width: 490px;
+            height: 251px;
+            margin-left: 80px;
+            margin-right: 80px;
+            margin-top: 30px;
+        }
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: row-reverse;
+        
+        &__logo img{
+            margin-left: 60px;
+        }
+        &__list{
+            margin-top: 4px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+    }
 }

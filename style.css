@@ -269,8 +269,12 @@ header {
   .restaurant {
     display: flex;
   }
+  .restaurant__section {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .restaurant__section h2 {
-    margin-left: 160px;
+    margin-left: 120px;
   }
   .restaurant__cards {
     display: flex;
@@ -280,8 +284,8 @@ header {
   .restaurant .card {
     width: 490px;
     height: 251px;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 60px;
+    margin-right: 60px;
     margin-top: 30px;
   }
   .footer {
@@ -296,6 +300,10 @@ header {
     display: flex;
     flex-direction: row;
     gap: 10px;
+  }
+  .footer__list--content {
+    padding: 5px;
+    margin-left: 5px;
   }
 }
 

@@ -1,7 +1,11 @@
 body {
   font-family: "Roboto", sans-serif;
+  height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .main-container {
@@ -232,13 +236,14 @@ header {
   height: auto;
 }
 .meal__section {
-  width: 320px;
-  border-radius: 50px 50px 0px 0px;
-  margin-left: 50%;
-  margin-top: 470px;
-  transform: translate(-50%, -50%);
+  width: 83%;
+  max-width: 400px;
+  margin: -50px auto 0 auto;
+  border-radius: 40px 40px 0 0;
   background: white;
   padding: 2rem;
+  position: relative;
+  z-index: 10;
 }
 .meal__section h2 {
   font-style: italic;

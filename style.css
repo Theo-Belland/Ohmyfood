@@ -224,19 +224,18 @@ header {
   margin-left: 20px;
 }
 
-.restaurant__meal {
+.meal {
   position: relative;
 }
-.restaurant__meal img {
+.meal img {
   width: 100%;
   height: auto;
 }
-
 .meal__section {
   width: 320px;
   border-radius: 50px 50px 0px 0px;
   margin-left: 50%;
-  margin-top: 150px;
+  margin-top: 470px;
   transform: translate(-50%, -50%);
   background: white;
   padding: 2rem;
@@ -246,6 +245,65 @@ header {
   font-family: "Shrikhand", sans-serif;
   font-weight: 400;
   font-size: 22px;
+}
+.meal__section--heart h2 {
+  margin-top: -5px;
+}
+.meal__section--heart i {
+  position: absolute;
+  right: 7%;
+  top: 36px;
+  margin-right: 25px;
+}
+.meal__section--heart.heart {
+  position: relative;
+}
+.meal__card--text {
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  margin-bottom: 5px;
+}
+.meal__card--content {
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 1px grey;
+}
+.meal__card--content-description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  flex: 1;
+  overflow: hidden;
+}
+.meal__card--content-description h3 {
+  margin: 0;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meal__card--content-description p {
+  margin: 0;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meal__card--content-price {
+  display: flex;
+  padding: 15px;
+}
+.meal__card--content-price p {
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 @media (min-width: 1024px) {
@@ -274,7 +332,9 @@ header {
     margin-right: auto;
   }
   .restaurant__section h2 {
-    margin-left: 120px;
+    margin-left: 160px;
+    margin-top: -20px;
+    margin-bottom: 5px;
   }
   .restaurant__cards {
     display: flex;
@@ -284,9 +344,9 @@ header {
   .restaurant .card {
     width: 490px;
     height: 251px;
-    margin-left: 60px;
-    margin-right: 60px;
-    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
   }
   .footer {
     display: flex;

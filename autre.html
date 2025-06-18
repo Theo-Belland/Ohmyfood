@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Heart Like Animation</title>
+  <style>
+    .heart-toggle input {
+      display: none;
+    }
+
+    .heart {
+      font-size: 48px;
+      color: #aaa;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.2s ease;
+      display: inline-block;
+    }
+
+    .heart::before {
+      content: "♡";
+    }
+
+    .heart-toggle input:checked + .heart::before {
+      content: "♥";
+      color: red;
+    }
+
+    .heart-toggle input:checked + .heart {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <label class="heart-toggle">
+    <input type="checkbox" />
+    <span class="heart"></span>
+  </label>
+</body>
+</html>

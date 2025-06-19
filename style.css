@@ -240,7 +240,7 @@ header {
   max-width: 400px;
   margin: -50px auto 0 auto;
   border-radius: 40px 40px 0 0;
-  background: white;
+  background: #f6f6f6;
   padding: 2rem;
   position: relative;
   z-index: 10;
@@ -264,9 +264,17 @@ header {
   position: relative;
 }
 .meal__card--text {
+  margin-top: 35px;
+}
+.meal__card--text h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  margin: 0;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
-  margin-bottom: 5px;
+  margin-left: -10px;
 }
 .meal__card--content {
   background-color: #fff;
@@ -276,6 +284,9 @@ header {
   align-items: flex-end;
   margin-bottom: 10px;
   box-shadow: 1px 1px 1px grey;
+  margin-top: 10px;
+  width: 340px;
+  margin-left: -15px;
 }
 .meal__card--content-description {
   display: flex;
@@ -287,6 +298,8 @@ header {
 }
 .meal__card--content-description h3 {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   font-size: 18px;
   white-space: nowrap;
   overflow: hidden;
@@ -369,6 +382,29 @@ header {
   .footer__list--content {
     padding: 5px;
     margin-left: 5px;
+  }
+  .meal img {
+    max-height: 383px;
+  }
+  .meal__section {
+    max-width: 1055px;
+  }
+  .meal__section--heart {
+    margin-left: 35%;
+  }
+  .meal__section i {
+    margin-right: 260px;
+  }
+  .meal__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .meal__card--text h2 {
+    margin-left: -320px;
+  }
+  .meal__card--content {
+    width: 634px;
   }
 }
 

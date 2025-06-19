@@ -297,7 +297,7 @@ header{
         max-width: 400px;
         margin: -50px auto 0 auto;
         border-radius: 40px 40px 0 0;
-        background: white;
+        background: $background-color;
         padding: 2rem;
         position: relative;
         z-index: 10;
@@ -324,9 +324,19 @@ header{
     }
     &__card{
         &--text{
-            border-bottom: 3px solid #99E2D0;
-            width: 40px;
-            margin-bottom: 5px;
+            margin-top: 35px;
+
+            h2 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                margin: 0;
+                border-bottom: 3px solid #99E2D0;
+                width: 40px;
+                margin-left: -10px;
+            }
+
             
         }
         &--content{
@@ -337,6 +347,9 @@ header{
             align-items: flex-end;
             margin-bottom: 10px;
             box-shadow: 1px 1px 1px grey;
+            margin-top: 10px;
+            width: 340px;
+            margin-left: -15px;
 
             &-description {
                     display: flex;
@@ -349,6 +362,8 @@ header{
 
                     h3 {
                         margin: 0;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 500;
                         font-size: 18px;
                         white-space: nowrap;
                         overflow: hidden;
@@ -446,4 +461,39 @@ header{
         }
 
     }
+    // page restaurant //
+
+    .meal{
+        & img{
+            max-height: 383px;
+        }
+
+        &__section{
+            max-width: 1055px;
+
+            &--heart{
+            margin-left: 35%;
+            }
+            & i{
+                margin-right: 260px;
+            }
+        }
+
+        &__card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &--text{
+                h2{
+                margin-left: -320px;
+                }
+            }
+            &--content{
+            width: 634px;
+  
+            }   
+        }
+
+    }
 }
+

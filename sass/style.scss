@@ -393,7 +393,16 @@ header{
                 }         
         }
     }
+    .order{
+        margin-left: 40px;
+        margin-top: 30px;
+        button{
+            @include button;
+        }
+    }
+
 }
+
 
 // Media queries //
 @media (min-width: 1024px) { 

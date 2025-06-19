@@ -323,6 +323,23 @@ header {
   font-size: 15px;
   font-weight: 700;
 }
+.meal .order {
+  margin-left: 40px;
+  margin-top: 30px;
+}
+.meal .order button {
+  background: linear-gradient(360deg, rgb(147, 86, 220) -11%, rgb(255, 121, 218) 123%);
+  color: white;
+  border-radius: 25px;
+  height: 50px;
+  width: 218px;
+  font-size: 16px;
+  border: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.meal .order button:hover {
+  background: linear-gradient(356deg, rgb(167.6865671642, 110.0597014925, 224.4402985075) 0%, rgb(180.4371257485, 146.5449101796, 221.9550898204) 33%, rgb(255, 146.5, 225.0410447761) 100%);
+}
 
 @media (min-width: 1024px) {
   .functioning {

@@ -27,6 +27,18 @@ $card-color: #99E2D0;
                     lighten(rgba(255, 121, 218, 1), 5%) 100%);        
         }
     }
+        @mixin heart {
+            color: transparent;
+            background-clip: text;
+            background-image: $heart-color;
+            opacity: 0;
+            transition: opacity 800ms;
+            cursor: pointer;
+
+        &:active {
+            opacity: 1;
+        }
+    }
 
 // Code de base //
 
@@ -229,9 +241,33 @@ header{
                 font-size: 17px;
                 margin: 0;
             }
-        }
+            &--heart {
+                    display: flex;
+                    align-items: center;
+                    font-size: 25px;
+                    padding-right: 25px;
+                    cursor: pointer;
+                    
+                    & .fa-regular{
+                        color: grey;
+                        transition: opacity 800ms;
+                    }
+
+                    & .fa-full {
+                    @include heart
+                    }
+
+                    input.heart-toggle:checked ~ .fa-regular{
+                        display: none;
+                    }
+                    input.heart-toggle:checked ~ .fa-full {
+                        opacity: 1;
+                    }
             }
+    }   
     }
+}
+
 
 .footer{
     padding: 22px 25px;
@@ -307,7 +343,7 @@ header{
         font-weight: 400;
         font-size: 22px;
     }
-    &--heart{
+    &--title{
         h2{
             margin-top: -5px;
         }
@@ -316,10 +352,31 @@ header{
                 right: 7%;
                 top: 36px;
                 margin-right: 25px;
-            }   
-        &.heart{
-            position: relative;
             } 
+    }
+    &--heart{
+                    display: flex;
+                    align-items: center;
+                    font-size: 25px;
+                    padding-right: 25px;
+                    cursor: pointer;
+                    
+                    & .fa-regular{
+                        color: grey;
+                        transition: opacity 800ms;
+                    }
+
+                    & .fa-full {
+                    @include heart
+                    }
+
+                    input.heart-toggle:checked ~ .fa-regular{
+                        display: none;
+                    }
+                    input.heart-toggle:checked ~ .fa-full {
+                        opacity: 1;
+                    }
+
     }
     }
     &__card{

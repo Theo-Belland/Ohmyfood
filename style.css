@@ -184,6 +184,34 @@ header {
   font-size: 17px;
   margin: 0;
 }
+.restaurant .card__content--heart {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  padding-right: 25px;
+  cursor: pointer;
+}
+.restaurant .card__content--heart .fa-regular {
+  color: grey;
+  transition: opacity 800ms;
+}
+.restaurant .card__content--heart .fa-full {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(180deg, rgb(147, 86, 220) -11%, rgb(255, 121, 218) 123%);
+  opacity: 0;
+  transition: opacity 800ms;
+  cursor: pointer;
+}
+.restaurant .card__content--heart .fa-full:active {
+  opacity: 1;
+}
+.restaurant .card__content--heart input.heart-toggle:checked ~ .fa-regular {
+  display: none;
+}
+.restaurant .card__content--heart input.heart-toggle:checked ~ .fa-full {
+  opacity: 1;
+}
 
 .footer {
   padding: 22px 25px;
@@ -251,17 +279,42 @@ header {
   font-weight: 400;
   font-size: 22px;
 }
-.meal__section--heart h2 {
+.meal__section--title h2 {
   margin-top: -5px;
 }
-.meal__section--heart i {
+.meal__section--title i {
   position: absolute;
   right: 7%;
   top: 36px;
   margin-right: 25px;
 }
-.meal__section--heart.heart {
-  position: relative;
+.meal__section--heart {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  padding-right: 25px;
+  cursor: pointer;
+}
+.meal__section--heart .fa-regular {
+  color: grey;
+  transition: opacity 800ms;
+}
+.meal__section--heart .fa-full {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(180deg, rgb(147, 86, 220) -11%, rgb(255, 121, 218) 123%);
+  opacity: 0;
+  transition: opacity 800ms;
+  cursor: pointer;
+}
+.meal__section--heart .fa-full:active {
+  opacity: 1;
+}
+.meal__section--heart input.heart-toggle:checked ~ .fa-regular {
+  display: none;
+}
+.meal__section--heart input.heart-toggle:checked ~ .fa-full {
+  opacity: 1;
 }
 .meal__card--text {
   margin-top: 35px;

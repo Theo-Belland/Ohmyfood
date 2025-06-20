@@ -1,0 +1,220 @@
+.header__meal{
+    display: flex;
+    align-items: center;
+    & h1{
+        margin-left: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    & i{
+        font-size: 20px;
+        margin-left: 20px;
+    }
+}
+.meal{
+    position: relative;
+    
+    & img{
+        width: 100%;
+        height: auto;
+    }
+
+    &__section{
+        width: 83%;
+        max-width: 400px;
+        margin: -50px auto 0 auto;
+        border-radius: 40px 40px 0 0;
+        background: $background-color;
+        padding: 2rem;
+        position: relative;
+        z-index: 10;
+    & h2{
+        font-style: italic;
+        font-family: "Shrikhand", sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+    }
+    &--title{
+        h2{
+            margin-top: -5px;
+        }
+        & i{
+                position: absolute;
+                right: 7%;
+                top: 36px;
+                margin-right: 25px;
+            } 
+    }
+    &--heart{
+                    display: flex;
+                    align-items: center;
+                    font-size: 25px;
+                    padding-right: 25px;
+                    cursor: pointer;
+                    
+                    & .fa-regular{
+                        color: grey;
+                        transition: opacity 800ms;
+                    }
+
+                    & .fa-full {
+                    @include heart
+                    }
+
+                    input.heart-toggle:checked ~ .fa-regular{
+                        display: none;
+                    }
+                    input.heart-toggle:checked ~ .fa-full {
+                        opacity: 1;
+                    }
+
+    }
+    }
+    &__card{
+
+            &--animation1{
+                animation: card-arrival 1000ms ease-in-out backwards;
+            }
+            &--animation2{
+                animation: card-arrival 1000ms ease-in-out backwards;
+                animation-delay: 500ms;
+            }
+            &--animation3{
+                animation: card-arrival 1000ms ease-in-out backwards;
+                animation-delay: 800ms;
+            }
+
+        &--text{
+            margin-top: 35px;
+
+            h2 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                margin: 0;
+                border-bottom: 3px solid #99E2D0;
+                width: 40px;
+                margin-left: -10px;
+            }
+
+            
+        }
+        &--content{
+            background-color: #fff;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 10px;
+            box-shadow: 1px 1px 1px grey;
+            margin-top: 10px;
+            width: 340px;
+            margin-left: -15px;
+            animation: appear 1s;
+
+            &-description {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    padding: 15px;
+                    flex: 1;
+                    overflow: hidden;
+                    
+
+                    h3 {
+                        margin: 0;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 500;
+                        font-size: 18px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow:ellipsis; 
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 15px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow:ellipsis; 
+                    }
+                }
+
+                &-price {
+                    display: flex;
+                    padding: 15px;
+                    p {
+                        display: flex;
+                        align-items: flex-end;
+                        margin: 0;
+                        font-size: 15px;
+                        font-weight: 700;
+                    }
+                }
+                &-check{
+                    background-color: #008766;
+                    opacity: 1;
+                    width: 60px;
+                    height: 75px;
+                    border-radius: 0 20px 20px 0;
+                    justify-content: center;
+                    margin-right: -15px;
+                    opacity: 0;
+                    &:hover{
+                        margin-right: -10px;
+                        opacity: 1;
+                    }
+                }
+
+        }
+    }
+    .order{
+        margin-left: 40px;
+        margin-top: 30px;
+        button{
+            @include button;
+        }
+    }
+
+}
+
+@media (min-width: 1024px) { 
+
+    // page restaurant //
+
+    .meal{
+        & img{
+            max-height: 383px;
+        }
+
+        &__section{
+            max-width: 1055px;
+
+            &--heart{
+            margin-left: 35%;
+            }
+            & i{
+                margin-right: 260px;
+            }
+            &--title{
+                margin-left: 30%;
+            }
+        }
+
+        &__card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &--content{
+            width: 634px;
+  
+            }   
+        }
+    .order{
+        margin-left: 35%;
+    }
+
+    }
+}
+

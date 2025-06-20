@@ -1,28 +1,13 @@
-body {
-  font-family: "Roboto", sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+@keyframes card-arrival {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
 }
-
-.main-container {
-  min-width: 320px;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  object-fit: cover;
-  width: 100%;
-}
-
 header {
   font-family: "Shrikhand", sans-serif;
   text-align: center;
@@ -123,6 +108,25 @@ header {
   font-size: 16px;
 }
 
+@media (min-width: 1024px) {
+  .functioning {
+    display: flex;
+  }
+  .functioning__section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .functioning__card {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .functioning__card--content {
+    width: 300px;
+  }
+  .functioning__card--content h3 {
+    margin-top: 25px;
+  }
+}
 .restaurant {
   padding: 54px 20px 66px 20px;
   background-color: #f6f6f6;
@@ -213,6 +217,32 @@ header {
   opacity: 1;
 }
 
+@media (min-width: 1024px) {
+  .restaurant {
+    display: flex;
+  }
+  .restaurant__section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .restaurant__section h2 {
+    margin-left: 160px;
+    margin-top: -20px;
+    margin-bottom: 5px;
+  }
+  .restaurant__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .restaurant .card {
+    width: 400px;
+    height: 251px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+  }
+}
 .footer {
   padding: 22px 25px;
   background-color: #363636;
@@ -242,6 +272,26 @@ header {
   font-size: 11px;
 }
 
+@media (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .footer__logo img {
+    margin-left: 60px;
+    margin-top: 15px;
+  }
+  .footer__list {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .footer__list--content {
+    padding: 5px;
+    margin-left: 5px;
+  }
+}
 .header__meal {
   display: flex;
   align-items: center;
@@ -316,6 +366,17 @@ header {
 .meal__section--heart input.heart-toggle:checked ~ .fa-full {
   opacity: 1;
 }
+.meal__card--animation1 {
+  animation: card-arrival 1000ms ease-in-out backwards;
+}
+.meal__card--animation2 {
+  animation: card-arrival 1000ms ease-in-out backwards;
+  animation-delay: 500ms;
+}
+.meal__card--animation3 {
+  animation: card-arrival 1000ms ease-in-out backwards;
+  animation-delay: 800ms;
+}
 .meal__card--text {
   margin-top: 35px;
 }
@@ -340,6 +401,7 @@ header {
   margin-top: 10px;
   width: 340px;
   margin-left: -15px;
+  animation: appear 1s;
 }
 .meal__card--content-description {
   display: flex;
@@ -376,6 +438,20 @@ header {
   font-size: 15px;
   font-weight: 700;
 }
+.meal__card--content-check {
+  background-color: #008766;
+  opacity: 1;
+  width: 60px;
+  height: 75px;
+  border-radius: 0 20px 20px 0;
+  justify-content: center;
+  margin-right: -15px;
+  opacity: 0;
+}
+.meal__card--content-check:hover {
+  margin-right: -10px;
+  opacity: 1;
+}
 .meal .order {
   margin-left: 40px;
   margin-top: 30px;
@@ -395,64 +471,6 @@ header {
 }
 
 @media (min-width: 1024px) {
-  .functioning {
-    display: flex;
-  }
-  .functioning__section {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .functioning__card {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .functioning__card--content {
-    width: 335px;
-  }
-  .functioning__card--content h3 {
-    margin-top: 25px;
-  }
-  .restaurant {
-    display: flex;
-  }
-  .restaurant__section {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .restaurant__section h2 {
-    margin-left: 160px;
-    margin-top: -20px;
-    margin-bottom: 5px;
-  }
-  .restaurant__cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .restaurant .card {
-    width: 490px;
-    height: 251px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
-  }
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  .footer__logo img {
-    margin-left: 60px;
-  }
-  .footer__list {
-    margin-top: 4px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
-  .footer__list--content {
-    padding: 5px;
-    margin-left: 5px;
-  }
   .meal img {
     max-height: 383px;
   }
@@ -465,17 +483,44 @@ header {
   .meal__section i {
     margin-right: 260px;
   }
+  .meal__section--title {
+    margin-left: 30%;
+  }
   .meal__card {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .meal__card--text h2 {
-    margin-left: -320px;
-  }
   .meal__card--content {
     width: 634px;
   }
+  .meal .order {
+    margin-left: 35%;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  min-width: 320px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

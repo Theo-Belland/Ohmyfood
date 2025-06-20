@@ -1,0 +1,37 @@
+
+.city_location{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #F3F3F3;
+    text-align: center;
+    padding: 0.5rem;
+    height: 50px;
+
+    h2{
+        font-size: 1rem;
+    }
+}
+
+.explorer {
+    background-color: $background-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 39px 45px 57px 45px;
+    
+    &__text {
+        text-align: center;
+        margin-bottom: 25px;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+    button{
+        @include button;
+    }
+
+}

@@ -339,6 +339,7 @@ header {
 }
 .meal__section--title h2 {
   margin-top: -5px;
+  margin-left: 10%;
 }
 .meal__section--title i {
   position: absolute;

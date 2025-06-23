@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes card-arrival {
   from {
     transform: scaleX(0);
@@ -234,9 +235,10 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1300px;
   }
   .restaurant .card {
-    width: 400px;
+    width: 450px;
     height: 251px;
     margin-left: 40px;
     margin-right: 40px;
@@ -304,6 +306,13 @@ header {
 .header__meal i {
   font-size: 20px;
   margin-left: 20px;
+}
+.header__meal img {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .meal {
@@ -402,6 +411,7 @@ header {
   width: 340px;
   margin-left: -15px;
   animation: appear 1s;
+  /* Afficher l’icône quand la checkbox est cochée */
 }
 .meal__card--content-description {
   display: flex;
@@ -430,6 +440,7 @@ header {
 .meal__card--content-price {
   display: flex;
   padding: 15px;
+  margin-right: -15px;
 }
 .meal__card--content-price p {
   display: flex;
@@ -439,18 +450,40 @@ header {
   font-weight: 700;
 }
 .meal__card--content-check {
-  background-color: #008766;
-  opacity: 1;
-  width: 60px;
+  background-color: #99E2D0;
   height: 75px;
   border-radius: 0 20px 20px 0;
   justify-content: center;
-  margin-right: -15px;
   opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  margin-bottom: -1px;
 }
-.meal__card--content-check:hover {
-  margin-right: -10px;
+.meal__card--content-check.fa-circle-check:hover {
+  display: flex;
+  justify-content: center;
+}
+.meal__card--content-check i {
+  font-size: 20px;
+}
+.meal__card--content input.check {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.meal__card--content input.check:checked ~ .meal__card--content-check {
   opacity: 1;
+  color: #99E2D0;
+  width: 60px;
+  margin-right: -1px;
+  margin-left: 15px;
+  transform: translateX(0);
+}
+.meal__card--content input.check:checked ~ .meal__card--content-check {
+  display: flex;
+  opacity: 1;
+  color: white;
+  align-items: center;
 }
 .meal .order {
   margin-left: 40px;
@@ -493,6 +526,14 @@ header {
   }
   .meal__card--content {
     width: 634px;
+  }
+  .meal--content-description {
+    overflow: none;
+    width: 50%;
+  }
+  .meal--content-price {
+    display: flex;
+    margin-right: -265px;
   }
   .meal .order {
     margin-left: 35%;

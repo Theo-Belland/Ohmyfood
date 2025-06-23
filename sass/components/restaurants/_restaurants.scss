@@ -196,7 +196,6 @@
 
                     /* Afficher l’icône quand la checkbox est cochée */
                     input.check:checked ~ .meal__card--content-check {
-                    display: flex;
                     opacity: 1;
                     color: white;
                     align-items: center;
@@ -214,9 +213,6 @@
 }
 
 @media (min-width: 1024px) { 
-
-    // page restaurant //
-
     .meal{
         & img{
             max-height: 383px;
@@ -241,24 +237,36 @@
             flex-direction: column;
             align-items: center;
             &--content{
-            width: 634px;
-  
-            }   
-        }
-        &--content{
-            &-description{
-                overflow: none;
-                width: 50%;
-            }
-            &-price{
-                display: flex;
-                margin-right: -265px;
-            }
-        }
-    .order{
-        margin-left: 35%;
-    }
+                width: 634px;
+                &-description{
+                    overflow: none;
+                    width: 50%;
+                }
 
-    }
-}
+                &-check{
+                    &.fa-circle-check:hover{
+                        display: flex;
+                        justify-content: center;
+                    } 
+                    
+                    & i{
+                        margin-right: 0;
+                        }
+                    }
+
+                    input.check:checked ~ .meal__card--content-check {
+                    display: flex;
+                    opacity: 1;
+                    color: white;
+                    align-items: center;
+                    }
+                }
+                }
+                .order{
+                    margin-left: 35%;
+                }
+            } 
+        }
+
+
 

@@ -480,7 +480,6 @@ header {
   transform: translateX(0);
 }
 .meal__card--content input.check:checked ~ .meal__card--content-check {
-  display: flex;
   opacity: 1;
   color: white;
   align-items: center;
@@ -527,13 +526,22 @@ header {
   .meal__card--content {
     width: 634px;
   }
-  .meal--content-description {
+  .meal__card--content-description {
     overflow: none;
     width: 50%;
   }
-  .meal--content-price {
+  .meal__card--content-check.fa-circle-check:hover {
     display: flex;
-    margin-right: -265px;
+    justify-content: center;
+  }
+  .meal__card--content-check i {
+    margin-right: 0;
+  }
+  .meal__card--content input.check:checked ~ .meal__card--content-check {
+    display: flex;
+    opacity: 1;
+    color: white;
+    align-items: center;
   }
   .meal .order {
     margin-left: 35%;

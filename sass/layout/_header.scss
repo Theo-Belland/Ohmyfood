@@ -1,7 +1,41 @@
-header{
+.header__meal{
     font-family: "Shrikhand", sans-serif;
     text-align: center;
     box-shadow: 0 0 0.5rem rgb(0 0 0 /25%);
     padding: 0.3rem;
     position: relative;
+    display: flex;
+    align-items: center;
+    & h1{
+        margin-left: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    & i{
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    &--title{
+      display: block;
+      
+    }
+    &--logo{
+      display: none;
+    }
+}
+
+@media (min-width: 1024px){
+  .header__meal{
+    &--title{
+      display: none;
+    }
+    &--logo{
+      display: block;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+  }
 }

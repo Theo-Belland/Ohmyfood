@@ -8,14 +8,44 @@
     opacity: 1;
   }
 }
-header {
+.header__meal {
   font-family: "Shrikhand", sans-serif;
   text-align: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   padding: 0.3rem;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+.header__meal h1 {
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.header__meal i {
+  font-size: 20px;
+  margin-left: 20px;
+}
+.header__meal--title {
+  display: block;
+}
+.header__meal--logo {
+  display: none;
 }
 
+@media (min-width: 1024px) {
+  .header__meal--title {
+    display: none;
+  }
+  .header__meal--logo {
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
 .city_location {
   display: flex;
   align-items: center;
@@ -293,27 +323,6 @@ header {
     margin-left: 5px;
   }
 }
-.header__meal {
-  display: flex;
-  align-items: center;
-}
-.header__meal h1 {
-  margin-left: 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.header__meal i {
-  font-size: 20px;
-  margin-left: 20px;
-}
-.header__meal img {
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .meal {
   position: relative;
 }
@@ -513,7 +522,8 @@ header {
     margin-left: 35%;
   }
   .meal__section i {
-    margin-right: 35%;
+    margin-right: 33%;
+    margin-top: -3px;
   }
   .meal__section--title {
     margin-left: 30%;

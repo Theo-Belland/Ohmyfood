@@ -59,6 +59,17 @@
 .city_location h2 {
   font-size: 1rem;
 }
+.city_location input {
+  border: none;
+  background-color: #F3F3F3;
+  height: 40px;
+}
+.city_location input::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
 
 .explorer {
   background-color: #f6f6f6;
@@ -345,6 +356,7 @@
   font-family: "Shrikhand", sans-serif;
   font-weight: 400;
   font-size: 22px;
+  margin-top: -1px;
 }
 .meal__section--title-mobile h2 {
   display: block;

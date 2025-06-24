@@ -22,9 +22,18 @@
         font-size: 22px;
     }
     &--title{
-        h2{
-            margin-top: -5px;
-            margin-left: 10%;
+        &-mobile{
+            h2{
+                display: block;
+                margin-top: -5px;
+                margin-left: 10%;
+            }
+        }
+
+        &-desktop{
+            h1{
+                display: none;
+            }
         }
         & i{
                 position: absolute;
@@ -215,6 +224,22 @@
             }
             &--title{
                 margin-left: 30%;
+                &-mobile{
+                    & h2{
+                        display: none;
+                    } 
+                }
+                &-desktop{
+                    & h1{
+                        display: block;
+                        font-style: italic;
+                        font-family: "Shrikhand", sans-serif;
+                        font-weight: 400;
+                        font-size: 22px;
+                        margin-top: -5px;
+                        margin-left: 10%;
+                    }
+                }
             }
         }
 

@@ -357,6 +357,7 @@ header {
 .meal__section--heart .fa-regular {
   color: grey;
   transition: opacity 800ms;
+  font-size: 22px;
 }
 .meal__section--heart .fa-full {
   color: transparent;
@@ -512,7 +513,7 @@ header {
     margin-left: 35%;
   }
   .meal__section i {
-    margin-right: 260px;
+    margin-right: 35%;
   }
   .meal__section--title {
     margin-left: 30%;

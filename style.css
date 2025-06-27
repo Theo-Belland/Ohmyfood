@@ -34,7 +34,7 @@
   align-items: center;
 }
 .header__meal h1 {
-  margin-left: 88px;
+  margin-left: 60px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -374,7 +374,6 @@
   font-weight: 400;
   font-size: 22px;
   margin-top: -1px;
-  margin-left: 100px;
 }
 .meal__section--title-mobile h2 {
   display: block;
@@ -560,7 +559,7 @@
     margin-top: -3px;
   }
   .meal__section--title {
-    margin-left: 30%;
+    margin-left: 37%;
   }
   .meal__section--title-mobile h2 {
     display: none;
@@ -572,7 +571,7 @@
     font-weight: 400;
     font-size: 22px;
     margin-top: -5px;
-    margin-left: 10%;
+    margin-left: -20px;
   }
   .meal__card {
     display: flex;

@@ -157,7 +157,7 @@
                 &-check {
                 background-color: $card-color;
                 height: 75px;
-                width: 60px; // ✅ Toujours défini pour permettre l'animation inverse
+                width: 60px; 
                 border-radius: 0 20px 20px 0;
                 justify-content: center;
                 align-items: center;
@@ -169,8 +169,8 @@
                     opacity 0.4s ease,
                     margin-right 0.4s ease,
                     margin-left 0.4s ease;
-                margin-right: 0; // ✅ par défaut
-                margin-left: 0;  // ✅ par défaut
+                margin-right: 0; 
+                margin-left: 0;  
                 margin-bottom: -1px;
 
                 & i {

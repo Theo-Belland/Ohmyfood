@@ -34,7 +34,7 @@
   align-items: center;
 }
 .header__meal h1 {
-  margin-left: 50px;
+  margin-left: 88px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -374,6 +374,7 @@
   font-weight: 400;
   font-size: 22px;
   margin-top: -1px;
+  margin-left: 100px;
 }
 .meal__section--title-mobile h2 {
   display: block;

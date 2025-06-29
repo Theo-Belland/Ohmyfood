@@ -361,7 +361,7 @@
 .meal__section {
   width: 83%;
   max-width: 400px;
-  margin: -50px auto 0 auto;
+  margin: -50px auto 0;
   border-radius: 40px 40px 0 0;
   background: #f6f6f6;
   padding: 2rem;
@@ -418,6 +418,11 @@
 .meal__section--heart input.heart-toggle:checked ~ .fa-full {
   opacity: 1;
 }
+.meal__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .meal__card--animation1 {
   animation: card-arrival 1000ms ease-in-out backwards;
 }
@@ -435,27 +440,47 @@
 .meal__card--text h2 {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 300;
   margin: 0;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   margin-left: -10px;
 }
-.meal__card--content {
+.meal__card--wrapper {
+  position: relative;
+  width: 100%;
+}
+.meal__card--wrapper .check {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  width: 0;
+  z-index: -1;
+}
+.meal__card--wrapper .meal__card--clickzone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+.meal__card--wrapper .meal__card--content {
+  position: relative;
+  z-index: 1;
   background-color: #fff;
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 10px;
-  box-shadow: 1px 1px 1px grey;
-  margin-top: 10px;
+  margin: 10px 0 10px -15px;
   width: 340px;
-  margin-left: -15px;
+  box-shadow: 1px 1px 1px grey;
   animation: appear 1s;
 }
-.meal__card--content-description {
+.meal__card--wrapper .meal__card--content-description {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -463,74 +488,68 @@
   flex: 1;
   overflow: hidden;
 }
-.meal__card--content-description h3 {
+.meal__card--wrapper .meal__card--content-description h3,
+.meal__card--wrapper .meal__card--content-description p {
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meal__card--wrapper .meal__card--content-description h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
-.meal__card--content-description p {
-  margin: 0;
+.meal__card--wrapper .meal__card--content-description p {
   font-size: 15px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
-.meal__card--content-price {
+.meal__card--wrapper .meal__card--content-price {
   display: flex;
   padding: 15px;
   margin-right: -50px;
   transition: margin-right 0.4s ease;
 }
-.meal__card--content-price p {
+.meal__card--wrapper .meal__card--content-price p {
   display: flex;
   align-items: flex-end;
   margin: 0;
   font-size: 15px;
   font-weight: 700;
 }
-.meal__card--content-check {
+.meal__card--wrapper .meal__card--content-check {
   background-color: #99E2D0;
   height: 75px;
   width: 60px;
   border-radius: 0 20px 20px 0;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   opacity: 0;
   transform: translateX(100%);
   transition: transform 0.4s ease, opacity 0.4s ease, margin-right 0.4s ease, margin-left 0.4s ease;
-  margin-right: 0;
-  margin-left: 0;
-  margin-bottom: -1px;
+  margin: 0;
+  margin-bottom: 0;
 }
-.meal__card--content-check i {
+.meal__card--wrapper .meal__card--content-check i {
   font-size: 20px;
   color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
-.meal__card--content input.check {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-.meal__card--content input.check:checked ~ .meal__card--content-check {
+.meal__card--wrapper .check:checked ~ .meal__card--content .meal__card--content-check {
   opacity: 1;
-  color: white;
   transform: translateX(0);
   margin-right: -1px;
+  margin-bottom: 0;
 }
-.meal__card--content input.check:checked ~ .meal__card--content-price {
+.meal__card--wrapper .check:checked ~ .meal__card--content .meal__card--content-price {
   margin-right: 5px;
 }
-
-.order {
+.meal .order {
   margin-left: 40px;
   margin-top: 30px;
 }
-.order button {
+.meal .order button {
   background: linear-gradient(360deg, rgb(147, 86, 220) -11%, rgb(255, 121, 218) 123%);
   color: white;
   border-radius: 25px;
@@ -540,10 +559,9 @@
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.order button:hover {
+.meal .order button:hover {
   background: linear-gradient(356deg, rgb(167.6865671642, 110.0597014925, 224.4402985075) 0%, rgb(180.4371257485, 146.5449101796, 221.9550898204) 33%, rgb(255, 146.5, 225.0410447761) 100%);
 }
-
 @media (min-width: 1024px) {
   .meal img {
     max-height: 383px;
@@ -571,37 +589,35 @@
     font-weight: 400;
     font-size: 22px;
     margin-top: -5px;
-    margin-left: -20px;
+    margin-left: -40px;
   }
-  .meal__card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .meal__card--content {
+  .meal__card .meal__card--content {
+    flex-direction: row;
     width: 634px;
   }
-  .meal__card--content-description {
-    overflow: none;
+  .meal__card .meal__card--content-description {
     width: 50%;
+    padding: 15px;
   }
-  .meal__card--content-check.fa-circle-check:hover {
-    display: flex;
-    justify-content: center;
+  .meal__card .meal__card--content-price {
+    padding: 15px;
+    margin-right: -50px;
+    font-size: 15px;
   }
-  .meal__card--content-check i {
+  .meal__card .meal__card--content-check {
+    opacity: 0;
+    transform: translateX(100%);
+    height: 75px;
+    width: 60px;
     margin-right: 0;
-  }
-  .meal__card--content input.check:checked ~ .meal__card--content-check {
-    display: flex;
-    opacity: 1;
-    color: white;
-    align-items: center;
+    margin-left: 0;
   }
   .meal .order {
     margin-left: 35%;
+    margin-top: 10px;
   }
 }
+
 body {
   font-family: "Roboto", sans-serif;
   height: 100%;

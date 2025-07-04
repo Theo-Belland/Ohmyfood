@@ -26,40 +26,57 @@
 }
 .header__meal {
   font-family: "Shrikhand", sans-serif;
-  text-align: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  padding: 0.3rem;
+  padding: 30px 20px;
   position: relative;
   display: flex;
   align-items: center;
-}
-.header__meal h1 {
-  margin-left: 90px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  justify-content: center;
 }
 .header__meal i {
   font-size: 20px;
-  margin-left: 20px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .header__meal--title {
-  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  text-align: center;
+  width: calc(100% - 120px);
+  max-width: 600px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.header__meal--title h1 {
+  margin: 0;
 }
 .header__meal--logo {
   display: none;
 }
 
+.small-padding .header__meal {
+  padding: 30px 20px;
+}
+
 @media (min-width: 1024px) {
+  .header__meal {
+    padding: 20px 0;
+  }
   .header__meal--title {
     display: none;
   }
   .header__meal--logo {
     display: block;
     width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 0 auto;
+  }
+  .header__meal i {
+    left: 40px;
   }
 }
 .city_location {
@@ -72,6 +89,9 @@
   padding: 0.5rem;
   height: 50px;
 }
+.city_location i {
+  margin-left: -7px;
+}
 .city_location h2 {
   font-size: 1rem;
 }
@@ -79,12 +99,14 @@
   border: none;
   background-color: #F3F3F3;
   height: 40px;
+  width: 115px;
 }
 .city_location input::placeholder {
   font-size: 16px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
   color: black;
+  text-align: center;
 }
 
 .explorer {
@@ -334,10 +356,10 @@
   }
   .footer__logo img {
     margin-left: 60px;
-    margin-top: 15px;
+    margin-top: 30px;
   }
   .footer__list {
-    margin-top: 4px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -364,6 +386,7 @@
   padding: 2rem;
   position: relative;
   z-index: 10;
+  overflow: hidden;
 }
 .meal__section h2 {
   font-style: italic;
@@ -438,10 +461,10 @@
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
+  font-style: normal;
   margin: 0;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
-  margin-left: -10px;
 }
 .meal__card--wrapper {
   position: relative;
@@ -472,7 +495,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 10px 0 10px -15px;
+  margin: 10px 0 10px 0;
   width: 340px;
   box-shadow: 1px 1px 1px grey;
   animation: appear 1s;

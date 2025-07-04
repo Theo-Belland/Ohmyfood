@@ -1,41 +1,62 @@
-.header__meal{
-    font-family: "Shrikhand", sans-serif;
+.header__meal {
+  font-family: "Shrikhand", sans-serif;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 30px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 20px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
     text-align: center;
-    box-shadow: 0 0 0.5rem rgb(0 0 0 /25%);
-    padding: 0.3rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    & h1{
-        margin-left: 90px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+    width: calc(100% - 120px);
+    max-width: 600px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    h1 {
+      margin: 0;
     }
-    & i{
-        font-size: 20px;
-        margin-left: 20px;
-    }
-    &--title{
-      display: block;
-      
-    }
-    &--logo{
-      display: none;
-    }
+  }
+
+  &--logo {
+    display: none;
+  }
 }
 
-@media (min-width: 1024px){
-  .header__meal{
-    &--title{
+.small-padding .header__meal {
+  padding: 30px 20px;
+}
+
+@media (min-width: 1024px) {
+  .header__meal {
+    padding: 20px 0;
+
+    &--title {
       display: none;
     }
-    &--logo{
+
+    &--logo {
       display: block;
-        width: 200px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    i {
+      left: 40px;
     }
   }
 }

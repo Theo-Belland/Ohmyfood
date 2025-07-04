@@ -12,7 +12,7 @@ Développer le site en Mobile First.
 /* Animation */
 
 -> Ajout des Animations de "like".                                                                            
--> Sélection des plats.
--> plat qui arrive en decaler
--> Loader.                                                                   
+-> Sélection des plats.                      
+-> plat qui arrive en decaler                              
+-> Loader.                                                                                 
 

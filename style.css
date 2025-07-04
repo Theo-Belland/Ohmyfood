@@ -78,6 +78,9 @@
   .header__meal i {
     left: 40px;
   }
+  .small-padding .header__meal {
+    padding: 15px 20px;
+  }
 }
 .city_location {
   display: flex;

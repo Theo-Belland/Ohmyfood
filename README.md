@@ -6,7 +6,7 @@ Objectif : Améliorez l'interface d'un site mobile avec des animations CSS.
 
 Développer le site en Mobile First.                                                
 
-/* Site Responsive */						
+/* Site Responsive */					                              	
 -> Utilisation de SASS.
 
 /* Animation */

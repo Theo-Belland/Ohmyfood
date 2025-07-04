@@ -34,7 +34,7 @@
   align-items: center;
 }
 .header__meal h1 {
-  margin-left: 80px;
+  margin-left: 90px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -118,9 +118,6 @@
 
 .functioning {
   margin: 48px 20px 68px 20px;
-}
-.functioning__section h3 {
-  margin-bottom: 26px;
 }
 .functioning__card {
   display: flex;
@@ -671,23 +668,6 @@ img {
 .loader__container .loader i {
   animation: grow-shrink 1.5s infinite ease-in-out;
   color: #9356DC;
-}
-
-@keyframes disappear {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
-}
-@keyframes grow-shrink {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
